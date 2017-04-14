@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!-- TABLE STYLES-->
+<link
+	href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"
+	rel="stylesheet" />
+<body>
+	<table id="example" class="display" width="100%" cellspacing="0">
+		<thead>
+			<tr>
+				<th>RecordId</th>
+				<th>Date</th>
+				<th>Weight in kg</th>
+				<th>Treadmill in km</th>
+				<th>Treadmill time</th>
+				<th>Cycling in km</th>
+				<th>Cycling Time</th>
+				<th>Gym Set</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th>RecordId</th>
+				<th>Date</th>
+				<th>Weight in kg</th>
+				<th>Treadmill in km</th>
+				<th>Treadmill time</th>
+				<th>Cycling in km</th>
+				<th>Cycling Time</th>
+				<th>Gym Set</th>
+			</tr>
+		</tfoot>
+	</table>
+	<!-- JS Scripts-->
+	<!-- DATA TABLE SCRIPTS -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script
+		src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#example').DataTable({
+				"ajax" : "data/objects.txt",
+				"columns" : [ {
+					"data" : "record_id"
+				}, {
+					"data" : "gym_date"
+				}, {
+					"data" : "weight_kg"
+				}, {
+					"data" : "treadmill_km"
+				}, {
+					"data" : "treadmill_time"
+				}, {
+					"data" : "cycling_km"
+				}, {
+					"data" : "cycling_time"
+				}, {
+					"data" : "gym_set"
+				} ]
+			});
+		});
+	</script>
+</body>
+</html>

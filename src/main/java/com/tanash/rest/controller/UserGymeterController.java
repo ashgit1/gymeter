@@ -33,7 +33,7 @@ public class UserGymeterController {
 		System.out.println("getWorkOutDetails() called...");
 
 		List<HealthMeter> userMetrics = usergymeterservice.getAllHealthMeter();
-		String userMetricsJson = new Gson().toJson(userMetrics);
+		String userMetricsJson = "{ \"data\": " + new Gson().toJson(userMetrics) + "}";
 		logger.info("json String : " + userMetricsJson);
 		System.out.println("json String : " + userMetricsJson);
 

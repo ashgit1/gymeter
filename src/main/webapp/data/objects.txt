@@ -1,0 +1,253 @@
+{
+	"data": [{
+			"record_id": 16,
+			"gym_date": "Apr 1, 2017",
+			"weight_kg": 81.7,
+			"treadmill_km": 1.324,
+			"treadmill_time": 10,
+			"cycling_km": 1.77,
+			"cycling_time": 5,
+			"gym_set": "Triceps"
+		},
+		{
+			"record_id": 17,
+			"gym_date": "Apr 4, 2017",
+			"weight_kg": 81.4,
+			"treadmill_km": 1.315,
+			"treadmill_time": 10,
+			"cycling_km": 1.74,
+			"cycling_time": 5,
+			"gym_set": "Chest"
+		},
+		{
+			"record_id": 18,
+			"gym_date": "Apr 5, 2017",
+			"weight_kg": 81.5,
+			"treadmill_km": 1.312,
+			"treadmill_time": 10,
+			"cycling_km": 1.71,
+			"cycling_time": 5,
+			"gym_set": "Shoulder"
+		},
+		{
+			"record_id": 19,
+			"gym_date": "Apr 7, 2017",
+			"weight_kg": 81.3,
+			"treadmill_km": 1.275,
+			"treadmill_time": 10,
+			"cycling_km": 1.68,
+			"cycling_time": 5,
+			"gym_set": "Back"
+		},
+		{
+			"record_id": 20,
+			"gym_date": "Apr 10, 2017",
+			"weight_kg": 80.5,
+			"treadmill_km": 0.75,
+			"treadmill_time": 5,
+			"cycling_km": 1.76,
+			"cycling_time": 5,
+			"gym_set": "Biceps"
+		},
+		{
+			"record_id": 21,
+			"gym_date": "Apr 11, 2017",
+			"weight_kg": 81.3,
+			"treadmill_km": 1.316,
+			"treadmill_time": 10,
+			"cycling_km": 1.85,
+			"cycling_time": 5,
+			"gym_set": "Triceps"
+		},
+		{
+			"record_id": 22,
+			"gym_date": "Apr 13, 2017",
+			"weight_kg": 81.5,
+			"treadmill_km": 0.777,
+			"treadmill_time": 5,
+			"cycling_km": 1.8,
+			"cycling_time": 5,
+			"gym_set": "Chest"
+		},
+		{
+			"record_id": 23,
+			"gym_date": "Apr 14, 2017",
+			"weight_kg": 81.5,
+			"treadmill_km": 1.377,
+			"treadmill_time": 10,
+			"cycling_km": 1.9,
+			"cycling_time": 5,
+			"gym_set": "Shoulder"
+		},
+		{
+			"record_id": 24,
+			"gym_date": "Mar 1, 2017",
+			"weight_kg": 82.9,
+			"treadmill_km": 1.151,
+			"treadmill_time": 10,
+			"cycling_km": 1.67,
+			"cycling_time": 5,
+			"gym_set": "Biceps"
+		},
+		{
+			"record_id": 25,
+			"gym_date": "Mar 9, 2017",
+			"weight_kg": 83.0,
+			"treadmill_km": 1.0,
+			"treadmill_time": 10,
+			"cycling_km": 1.57,
+			"cycling_time": 5,
+			"gym_set": "Triceps"
+		},
+		{
+			"record_id": 26,
+			"gym_date": "Mar 11, 2017",
+			"weight_kg": 83.0,
+			"treadmill_km": 1.043,
+			"treadmill_time": 10,
+			"cycling_km": 1.71,
+			"cycling_time": 5,
+			"gym_set": "Shoulder"
+		},
+		{
+			"record_id": 27,
+			"gym_date": "Mar 13, 2017",
+			"weight_kg": 82.8,
+			"treadmill_km": 1.153,
+			"treadmill_time": 10,
+			"cycling_km": 1.6,
+			"cycling_time": 5,
+			"gym_set": "Chest"
+		},
+		{
+			"record_id": 28,
+			"gym_date": "Mar 14, 2017",
+			"weight_kg": 83.4,
+			"treadmill_km": 1.677,
+			"treadmill_time": 15,
+			"cycling_km": 1.71,
+			"cycling_time": 5,
+			"gym_set": "Triceps"
+		},
+		{
+			"record_id": 29,
+			"gym_date": "Mar 15, 2017",
+			"weight_kg": 82.9,
+			"treadmill_km": 1.141,
+			"treadmill_time": 10,
+			"cycling_km": 1.65,
+			"cycling_time": 5,
+			"gym_set": "Back"
+		},
+		{
+			"record_id": 30,
+			"gym_date": "Mar 16, 2017",
+			"weight_kg": 83.3,
+			"treadmill_km": 1.014,
+			"treadmill_time": 10,
+			"cycling_km": 1.73,
+			"cycling_time": 5,
+			"gym_set": "Biceps"
+		},
+		{
+			"record_id": 31,
+			"gym_date": "Mar 17, 2017",
+			"weight_kg": 83.0,
+			"treadmill_km": 1.19,
+			"treadmill_time": 10,
+			"cycling_km": 1.78,
+			"cycling_time": 5,
+			"gym_set": "Shoulder"
+		},
+		{
+			"record_id": 32,
+			"gym_date": "Mar 20, 2017",
+			"weight_kg": 82.4,
+			"treadmill_km": 1.186,
+			"treadmill_time": 10,
+			"cycling_km": 1.73,
+			"cycling_time": 5,
+			"gym_set": "Chest"
+		},
+		{
+			"record_id": 33,
+			"gym_date": "Mar 21, 2017",
+			"weight_kg": 82.8,
+			"treadmill_km": 1.204,
+			"treadmill_time": 10,
+			"cycling_km": 1.7,
+			"cycling_time": 5,
+			"gym_set": "Triceps"
+		},
+		{
+			"record_id": 34,
+			"gym_date": "Mar 22, 2017",
+			"weight_kg": 82.6,
+			"treadmill_km": 1.214,
+			"treadmill_time": 10,
+			"cycling_km": 1.71,
+			"cycling_time": 5,
+			"gym_set": "Biceps"
+		},
+		{
+			"record_id": 35,
+			"gym_date": "Mar 23, 2017",
+			"weight_kg": 82.9,
+			"treadmill_km": 1.221,
+			"treadmill_time": 10,
+			"cycling_km": 1.71,
+			"cycling_time": 5,
+			"gym_set": "Shoulder"
+		},
+		{
+			"record_id": 36,
+			"gym_date": "Mar 25, 2017",
+			"weight_kg": 81.7,
+			"treadmill_km": 1.175,
+			"treadmill_time": 10,
+			"cycling_km": 1.6,
+			"cycling_time": 5,
+			"gym_set": "Back"
+		},
+		{
+			"record_id": 37,
+			"gym_date": "Mar 27, 2017",
+			"weight_kg": 81.6,
+			"treadmill_km": 1.24,
+			"treadmill_time": 10,
+			"cycling_km": 1.79,
+			"cycling_time": 5,
+			"gym_set": "Chest"
+		},
+		{
+			"record_id": 38,
+			"gym_date": "Mar 28, 2017",
+			"weight_kg": 81.8,
+			"treadmill_km": 1.275,
+			"treadmill_time": 10,
+			"cycling_km": 1.71,
+			"cycling_time": 5,
+			"gym_set": "Shoulder"
+		},
+		{
+			"record_id": 39,
+			"gym_date": "Mar 30, 2017",
+			"weight_kg": 81.7,
+			"treadmill_km": 1.304,
+			"treadmill_time": 10,
+			"cycling_km": 1.81,
+			"cycling_time": 5,
+			"gym_set": "Back"
+		},
+		{
+			"record_id": 40,
+			"gym_date": "Mar 31, 2017",
+			"weight_kg": 82.0,
+			"treadmill_km": 1.305,
+			"treadmill_time": 10,
+			"cycling_km": 1.79,
+			"cycling_time": 5,
+			"gym_set": "Biceps"
+		}
+	]
+}
