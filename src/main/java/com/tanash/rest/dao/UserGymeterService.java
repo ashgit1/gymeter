@@ -1,6 +1,7 @@
 package com.tanash.rest.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -40,6 +41,33 @@ public class UserGymeterService {
 		}
 
 		return hmlist;
+	}
+	
+	public String addHealthMeter(HealthMeter hmobj){
+		String MESSAGE=null;;
+		try{
+			String query = "insert into health_meter (gym_date, weight_kg, treadmill_km, treadmill_time, cycling_km, cycling_time, gym_set) "
+							+ " values(?, ?, ?, ?, ?, ?, ?)";
+			PreparedStatement preparedStmt  = connection.prepareStatement(query);
+			preparedStmt.setDate(1, hmobj.getGym_date());
+			preparedStmt.setDouble(2, hmobj.getWeight_kg());
+			preparedStmt.setDouble(3,  hmobj.getTreadmill_km());
+			preparedStmt.setInt(4, hmobj.getTreadmill_time());
+			preparedStmt.setDouble(5, hmobj.getCycling_km());
+			preparedStmt.setInt(6, hmobj.getCycling_time());
+			preparedStmt.setString(7, hmobj.getGym_set());
+			
+			int result = preparedStmt.executeUpdate();
+			if(result==1){
+				MESSAGE = "User Workout Details Added Successfully !!!";
+			}else{
+				MESSAGE = "ERROR";
+			}			
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		
+		return MESSAGE;
 	}
 
 }
