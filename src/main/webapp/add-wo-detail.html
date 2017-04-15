@@ -84,20 +84,100 @@
 				<div class="row">
 					<div class="col-md-12">
 						<form action="api/users/ashish/add/workout_details" method="post">
-							Date:<input type="text" name="date" /> (yyyy/MM/dd) <br />
-							<br /> Weight(kg):<input type="text" name="weight" /><br />
-							<br /> TreadMill(km):<input type="text" name="treadmill_km" /><br />
-							<br /> TreadMill(mins):<input type="text" name="treadmill_min" /><br />
-							<br /> Cycling(km):<input type="text" name="cycling_km" /><br />
-							<br /> Cycling(mins):<input type="text" name="cyclig_min" /><br />
-							<br /> GymSet:<input type="text" name="gymset" /><br />
-							<br /> <input type="submit" value="Add Workout" />
+							<div class="row">
+								<div class="col-md-2">
+									<label for="date">Date:</label>
+								</div>
+								<div class="col-md-8">
+									<input type="text" name="date" style="width: 200px;" />
+									(yyyy/MM/dd)
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2">
+									<label for="weight">Weight(kg):</label>
+								</div>
+								<div class="col-md-8">
+									<input type="number" step="any" name="weight" style="width: 200px;" />
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2">
+									<label for="treadmill_km">TreadMill(km):</label>
+								</div>
+								<div class="col-md-8">
+									<input type="number" step="any" name="treadmill_km" style="width: 200px;" />
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2">
+									<label for="treadmill_mins">TreadMill(mins):</label>
+								</div>
+								<div class="col-md-8">
+									<select name="treadmill_min" style="width: 200px;">
+										<option value="5">5(mins)</option>
+										<option value="10">10(mins)</option>
+										<option value="15">15(mins)</option>
+										<option value="20">20(mins)</option>
+									</select>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2">
+									<label for="cycling_km">Cycling(km):</label>
+								</div>
+								<div class="col-md-8">
+									<input type="number" step="any" name="cycling_km" style="width: 200px;" />
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2">
+									<label for="cycling_mins">Cycling(mins):</label>
+								</div>
+								<div class="col-md-8">
+									<select name="cyclig_min" style="width: 200px;">
+										<option value="5">5(mins)</option>
+										<option value="10">10(mins)</option>
+										<option value="15">15(mins)</option>
+										<option value="20">20(mins)</option>
+									</select>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2">
+									<label for="gymset">GymSet:</label>
+								</div>
+								<div class="col-md-8">
+									<select name="gymset" style="width: 200px;">
+										<option value="Biceps">Biceps</option>
+										<option value="Triceps">Triceps</option>
+										<option value="Chest">Chest</option>
+										<option value="Shoulder">Shoulder</option>
+										<option value="Back">Back</option>
+										<option value="Legs">Legs</option>
+										<option value="Basics">Basics</option>
+									</select>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+							<div class="col-md-2"></div>
+								<div class="col-md-4">
+									<input type="submit" value="Add Workout" />&nbsp;&nbsp;
+									<input type="reset">
+								</div>
+								<div class="col-md-4"></div>
+							</div>
 						</form>
 					</div>
 				</div>
 				<!-- /. ROW  -->
-
-
 				<footer>
 					<p>
 						All right reserved. Template by: <a href="http://webthemez.com">WebThemez</a>

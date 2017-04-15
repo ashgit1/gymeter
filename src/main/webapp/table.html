@@ -72,6 +72,8 @@
 					<li><a href="empty.html"><i class="fa fa-fw fa-file"></i>
 							Empty Page</a></li>
 					-->
+					<li><a href="add-wo-detail.html"><i class="fa fa-fw fa-file"></i> 
+					Enter Workout</a></li>
 				</ul>
 
 			</div>
@@ -153,7 +155,7 @@
 	<script>
             $(document).ready(function () {
                 $('#dataTables-example').dataTable({
-                    "ajax": "http://localhost:8081/gymeter/api/users/ashish/workout_details",
+                    "ajax": "http://localhost:8081/gymeter/api/users/ashish/workout_details", // (localhost)/(192.168.99.1)/(192.168.1.102)
                     "columns": [
                         { "data": "gym_date" },
                         { "data": "weight_kg" },

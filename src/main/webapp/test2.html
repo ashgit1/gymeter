@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+	border: 1px solid grey;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+table tr:nth-child(odd) {
+	background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+	background-color: #ffffff;
+}
+</style>
+<script
+	src="js/angular.min.js"></script>
+<body>
+	<div ng-app="gymeterApp" ng-controller="gymeterCtrl">
+
+		<table>
+		<thead>
+			<tr>
+				<td>Record Id</td>
+				<td>Day Week</td>
+				<td>WO Desc</td>
+			</tr>
+		</thead>
+			<tr ng-repeat="x in wopDetails">
+				<td>{{ x.record_id }}</td>
+				<td>{{ x.day_of_week }}</td>
+				<td>{{ x.wo_desc }}</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<script>
+		var app = angular.module('gymeterApp', []);
+		app.controller('gymeterCtrl', function($scope, $http) {
+			$http.get("http://localhost:8081/gymeter/api/users/ashish/workout_plan").then(function(response) {
+				$scope.wopDetails = response.data.wopdata;
+			});
+		});
+	</script>
+
+</body>
+</html>

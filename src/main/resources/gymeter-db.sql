@@ -36,3 +36,25 @@ values('2017-03-06', 85.2, 1.155, 10, 1.65, 5, "Triceps");
 insert into health_meter (gym_date, weight_kg, treadmill_km, treadmill_time, cycling_km, cycling_time, gym_set)
 values('2017-03-07', 85.1, 1.200, 10, 1.69, 5, "Legs");
 
+-- taking backup of health_meter table
+create table health_meter_bck as select * from health_meter;
+
+-- avg weight based on gym set
+select gym_set, avg(weight_kg) from health_meter group by gym_set;
+
+-- delete all records from health_meter_bck and copy again from health_meter;
+ delete from health_meter_bck;
+ insert into health_meter_bck select * from  health_meter;
+ 
+-- work_out_plan table definition
+create table work_out_plan(
+record_id INT NOT NULL AUTO_INCREMENT,
+user_name VARCHAR(50) NOT NULL,
+day_of_week VARCHAR(50) NOT NULL,
+wo_desc VARCHAR(1000) NOT NULL,
+PRIMARY KEY ( record_id )
+)
+
+-- some records in work_out_plan table
+insert into work_out_plan (user_name, day_of_week, wo_desc)
+values("Ashish", "Monday", "Upper Body Workout. I kick start my week with chest");

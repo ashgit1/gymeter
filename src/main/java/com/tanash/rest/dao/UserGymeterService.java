@@ -9,11 +9,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.tanash.rest.model.HealthMeter;
+import com.tanash.rest.model.WorkOutPlan;
 import com.tanash.rest.util.DBUtility;
 
 public class UserGymeterService {
 
 	private Connection connection;
+	private Statement statement;
+	private ResultSet rs;
+	private PreparedStatement preparedStmt;
+	WorkOutPlan wop;
+	List<WorkOutPlan> wopList;
 
 	public UserGymeterService() {
 		connection = DBUtility.getConnection();
@@ -22,8 +28,8 @@ public class UserGymeterService {
 	public List<HealthMeter> getAllHealthMeter() {
 		List<HealthMeter> hmlist = new ArrayList<HealthMeter>();
 		try {
-			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("select * from health_meter");
+			statement = connection.createStatement();
+			rs = statement.executeQuery("select * from health_meter");
 			while (rs.next()) {
 				HealthMeter hm = new HealthMeter();
 				hm.setRecord_id(rs.getInt("record_id"));
@@ -48,7 +54,7 @@ public class UserGymeterService {
 		try{
 			String query = "insert into health_meter (gym_date, weight_kg, treadmill_km, treadmill_time, cycling_km, cycling_time, gym_set) "
 							+ " values(?, ?, ?, ?, ?, ?, ?)";
-			PreparedStatement preparedStmt  = connection.prepareStatement(query);
+			preparedStmt  = connection.prepareStatement(query);
 			preparedStmt.setDate(1, hmobj.getGym_date());
 			preparedStmt.setDouble(2, hmobj.getWeight_kg());
 			preparedStmt.setDouble(3,  hmobj.getTreadmill_km());
@@ -68,6 +74,27 @@ public class UserGymeterService {
 		}
 		
 		return MESSAGE;
+	}
+	
+	public List<WorkOutPlan> getWorkOutPlan(String user) {
+		wopList = new ArrayList<WorkOutPlan>();
+		try {
+			String query = "select * from work_out_plan where user_name = ?";
+			preparedStmt = connection.prepareStatement(query);
+			preparedStmt.setString(1, user);
+			rs = preparedStmt.executeQuery();
+			while (rs.next()) {
+				wop = new WorkOutPlan();
+				wop.setRecord_id(rs.getInt("record_id"));
+				wop.setDay_of_week(rs.getString("day_of_week"));
+				wop.setWo_desc(rs.getString("wo_desc"));
+				wopList.add(wop);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return wopList;
 	}
 
 }

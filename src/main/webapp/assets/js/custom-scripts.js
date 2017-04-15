@@ -66,14 +66,20 @@
             Morris.Donut({
                 element: 'morris-donut-chart',
                 data: [{
-                    label: "Download Sales",
-                    value: 12
+                    label: "# Biceps Set",
+                    value: 5
                 }, {
-                    label: "In-Store Sales",
-                    value: 30
+                    label: "# Triceps Set",
+                    value: 5
                 }, {
-                    label: "Mail-Order Sales",
-                    value: 20
+                    label: "# Chest Sets",
+                    value: 5
+                }, {
+                    label: "# Shoulders Set",
+                    value: 6
+                }, {
+                    label: "# Back Sets",
+                    value: 4
                 }],
                 resize: true
             });
