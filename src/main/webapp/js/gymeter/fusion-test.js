@@ -1,5 +1,5 @@
 FusionCharts.ready(function () {
-    var chartWidth = '550',
+    var chartWidth = '500',
         chartHeight = '300',
         dataType = 'json';
     
@@ -387,5 +387,67 @@ FusionCharts.ready(function () {
                  ]
         }
     }).render();
+    
+    // No of sets till date
+    var fusioncharts = new FusionCharts({
+        type: 'doughnut3d',
+        renderAt: 'sets-container-donut',
+        width: '600',
+        height: '300',
+        dataFormat: dataType,
+        dataSource: {
+            "chart": {
+                "caption": "No of each Gym Sets",
+                "subCaption": "Till Date",
+                "numberPrefix": "#",
+                "showBorder": "0",
+                "use3DLighting": "0",
+                "enableSmartLabels": "0",
+                "startingAngle": "310",
+                "showLabels": "0",
+                "showPercentValues": "0",
+                "showTooltip": "1",
+                "showLegend": "1",
+                "defaultCenterLabel": "Total Days: #106",
+                "centerLabel": "Total $label sets: $value",
+                "centerLabelBold": "1",
+                "decimals": "0",
+                "useDataPlotColorForLabels": "1",
+                "exportEnabled": "1",
+                "showBorder": "1",
+                "borderColor": "#666666",
+                "borderThickness": "4",
+                "borderAlpha": "80",
+                "canvasBgAlpha": "0",
+                "bgColor": "EEEEEE,CCCCCC",
+                "bgratio": "60,40",
+                "bgAlpha": "70,80",
+                "theme": "fint"
+            },
+            "data": [{
+                "label": "Biceps",
+                "value": "11"
+            }, {
+                "label": "Triceps",
+                "value": "10"
+            }, {
+                "label": "Chest",
+                "value": "10"
+            }, {
+                "label": "Shoulder",
+                "value": "12"
+            }, {
+                "label": "Back",
+                "value": "7"
+            }, {
+                "label": "Legs",
+                "value": "1"
+            }, {
+                "label": "Basics",
+                "value": "11"
+            }]
+        }
+    }
+    ).render();
     
 })

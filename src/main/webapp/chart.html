@@ -85,62 +85,40 @@
                     </div>
                 </div> 
                  <!-- /. ROW  -->
-             
-                <div class="row"> 
-                    
-                      
-                               <div class="col-md-6 col-sm-12 col-xs-12">                     
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Bar Chart
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-bar-chart"></div>
-                        </div>
-                    </div>            
-                </div>
-                      <div class="col-md-6 col-sm-12 col-xs-12">                     
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Area Chart
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-area-chart"></div>
-                        </div>
-                    </div>            
-                </div> 
-                
-           </div>
-                 <!-- /. ROW  -->
-                <div class="row">                     
-                      
-                               <div class="col-md-6 col-sm-12 col-xs-12">                     
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Line Chart Representation of Weight
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-line-chart"></div>
-                        </div>
-                    </div>            
-                </div>
-                      <div class="col-md-6 col-sm-12 col-xs-12">                     
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Donut Chart Representation of Sets
-                        </div>
-                        <div class="panel-body">                            
-							<div id="morris-donut-chart"></div>
-                        </div>
-                    </div>            
-                </div> 
-                
-           </div>
-                 <!-- /. ROW  -->
+
+				<div class="row">
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<div id='weight-container-line'></div>
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<div id='weight-container-bar'></div>
+					</div>
+				</div>
+				<!-- /. ROW  -->
+				<br>
+				<div class="row">
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<div id='days-container-line'></div>
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<div id='days-container-bar'></div>
+					</div>
+				</div>
+				<!-- /. ROW  -->
+				<br>
+				<div class="row">
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<div id='sets-container-donut'></div>
+					</div>
+					<div class="col-md-6 col-sm-12 col-xs-12"></div>
+				</div>
+				<br>
+				<!-- /. ROW  -->
+				
 				 <footer><p>All right reserved. Template by: <a href="http://webthemez.com">WebThemez</a></p></footer>
 				</div>
              <!-- /. PAGE INNER  -->
-            </div>
+			</div>
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->
@@ -156,7 +134,10 @@
     <script src="assets/js/morris/morris.js"></script>
       <!-- Custom Js -->
     <script src="assets/js/custom-scripts.js"></script>
-    
-   
+    <!-- Fusion Charts Js -->
+   	<script type="text/javascript" src="fusioncharts/js/fusioncharts.js"></script>
+	<script type="text/javascript" src="fusioncharts/themes/fusioncharts.theme.fint.js"></script>
+	<script type="text/javascript" src="js/gymeter/fusion-test.js"></script>
+
 </body>
 </html>
