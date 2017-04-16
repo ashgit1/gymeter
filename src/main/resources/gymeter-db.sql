@@ -57,4 +57,28 @@ PRIMARY KEY ( record_id )
 
 -- some records in work_out_plan table
 insert into work_out_plan (user_name, day_of_week, wo_desc)
-values("Ashish", "Monday", "Upper Body Workout. I kick start my week with chest");
+values("Ashish", "Monday", "Cardio: 10 mins Traedmill and 5 mins cycling. I kick start my week with chest exercise. I do regular 5-6 excersie as suggested by me gym trainer.");
+
+insert into work_out_plan (user_name, day_of_week, wo_desc)
+values("Ashish", "Tuesday", "Cardio: 10 mins Traedmill and 5 mins cycling. Next is shoulder exercise. I do regular 5-6 excersie as suggested by me gym trainer.");
+ 
+insert into work_out_plan (user_name, day_of_week, wo_desc)
+values("Ashish", "Wednesday", "Cardio: 10 mins Traedmill and 5 mins cycling. Next is Back exercise. I do regular 5-6 excersie as suggested by me gym trainer.");
+
+insert into work_out_plan (user_name, day_of_week, wo_desc)
+values("Ashish", "Thursday", "Cardio: 10 mins Traedmill and 5 mins cycling. Next is Biceps exercise. I do regular 5-6 excersie as suggested by me gym trainer.");
+
+insert into work_out_plan (user_name, day_of_week, wo_desc)
+values("Ashish", "Friday", "Cardio: 10 mins Traedmill and 5 mins cycling. Next is Triceps exercise. I do regular 5-6 excersie as suggested by me gym trainer.");
+
+insert into work_out_plan (user_name, day_of_week, wo_desc)
+values("Ashish", "Saturday", "Cardio: 10 mins Traedmill and 5 mins cycling. Next is Legs exercise. I do regular 5-6 excersie as suggested by me gym trainer.");
+
+insert into work_out_plan (user_name, day_of_week, wo_desc)
+values("Ashish", "Sunday", "This is day off. I sit at home and eat whatever I fell and just enjoy the day. This helps me to relax my muscles!!!");
+
+-- get numbers of days in gym per month
+select count(*) from health_meter where gym_date like '2017-01-%'; -- January
+
+
+
