@@ -13,7 +13,7 @@ FusionCharts.ready(function () {
         dataSource: {
             "chart":{
                 "caption":"Weekly Weight Check Trend for the last quater",
-                "subcaption":"From 80 to 86",
+                "subcaption":"From 86 to 80",
                 "xaxisname":"Date",
                 "yaxisname":"Weights in Kgs",
                 "setAdaptiveYMin": "1",
@@ -127,7 +127,7 @@ FusionCharts.ready(function () {
         dataSource: {
             "chart":{
                 "caption":"Weekly Weight Check Trend for the last quater",
-                "subcaption":"From 80 to 86",
+                "subcaption":"From 86 to 80",
                 "xaxisname":"Date",
                 "yaxisname":"Weights in Kgs",
                 "setAdaptiveYMin": "1",

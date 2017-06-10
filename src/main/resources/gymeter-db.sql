@@ -78,7 +78,31 @@ insert into work_out_plan (user_name, day_of_week, wo_desc)
 values("Ashish", "Sunday", "This is day off. I sit at home and eat whatever I fell and just enjoy the day. This helps me to relax my muscles!!!");
 
 -- get numbers of days in gym per month
-select count(*) from health_meter where gym_date like '2017-01-%'; -- January
+select count(*) from health_meter where gym_date like '%-01-%'; 	-- January
 
+-- get number of each gym sets
+select count(*) from health_meter where gym_set='Basics';
 
+-- get all the number of gym_set in a single query
+select gym_set, count(*) as 'number(set)' from health_meter 
+group by gym_set;
 
+-- get the weights of a particular month
+select weight_kg, gym_date from health_meter where gym_date like '%-01-%';
+
+-- Total run on treadmill
+mysql> select sum(treadmill_km), sum(treadmill_time) as minutes from health_meter;
++-------------------+---------+
+| sum(treadmill_km) | minutes |
++-------------------+---------+
+|            92.358 |     775 |
++-------------------+---------+
+
+-- total cycling
+mysql> select sum(cycling_km), sum(cycling_time) as minutes from health_meter;
++-----------------+---------+
+| sum(cycling_km) | minutes |
++-----------------+---------+
+|         146.830 |     430 |
++-----------------+---------+
+1 row in set (0.00 sec)
