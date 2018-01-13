@@ -91,18 +91,61 @@ group by gym_set;
 select weight_kg, gym_date from health_meter where gym_date like '%-01-%';
 
 -- Total run on treadmill
-mysql> select sum(treadmill_km), sum(treadmill_time) as minutes from health_meter;
-+-------------------+---------+
-| sum(treadmill_km) | minutes |
-+-------------------+---------+
-|            92.358 |     775 |
-+-------------------+---------+
+mysql> select sum(treadmill_km), sum(treadmill_time) as minutes, curdate() from health_meter;
++-------------------+---------+------------+
+| sum(treadmill_km) | minutes | curdate()  |
++-------------------+---------+------------+
+|           114.089 |     917 | 2017-07-02 |
++-------------------+---------+------------+
 
 -- total cycling
-mysql> select sum(cycling_km), sum(cycling_time) as minutes from health_meter;
-+-----------------+---------+
-| sum(cycling_km) | minutes |
-+-----------------+---------+
-|         146.830 |     430 |
-+-----------------+---------+
+mysql> select sum(cycling_km), sum(cycling_time) as minutes, curdate() from health_meter;
++-----------------+---------+------------+
+| sum(cycling_km) | minutes | curdate()  |
++-----------------+---------+------------+
+|         189.130 |     540 | 2017-07-02 |
++-----------------+---------+------------+
+
+-- Replace a word in a column
+update work_out_plan
+set wo_desc = REPLACE(wo_desc, 'Traedmill' , 'Treadmill')
+where user_name='Ashish';
+
+-- 2017 recap Start:
+
+select gym_set, count(*) as 'number(set)' from health_meter
+    -> group by gym_set;
++----------+-------------+
+| gym_set  | number(set) |
++----------+-------------+
+| Abs      |           1 |
+| Back     |          32 |
+| Basics   |          24 |
+| Biceps   |          40 |
+| Chest    |          38 |
+| Legs     |          14 |
+| Shoulder |          38 |
+| Triceps  |          38 |
++----------+-------------+
+8 rows in set (0.03 sec)
+
+mysql>  select sum(treadmill_km), sum(treadmill_time) as minutes, curdate() from health_meter;
++-------------------+---------+------------+
+| sum(treadmill_km) | minutes | curdate()  |
++-------------------+---------+------------+
+|           183.965 |    1344 | 2018-01-13 |
++-------------------+---------+------------+
+1 row in set (0.04 sec)
+
+mysql> select sum(cycling_km), sum(cycling_time) as minutes, curdate() from health_meter;
++-----------------+---------+------------+
+| sum(cycling_km) | minutes | curdate()  |
++-----------------+---------+------------+
+|         285.330 |     775 | 2018-01-13 |
++-----------------+---------+------------+
 1 row in set (0.00 sec)
+
+-- 2017 recap End:
+
+
+

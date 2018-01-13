@@ -2,9 +2,12 @@
  * Populating the TreadMill(mins) drop down in add-wo-detail.html
  */
 var optionsTreadMill = [ {
-	"text" : "5(mins)",
-	"value" : "5",
+	"text" : "0(mins)",
+	"value" : "0",
 	"selected" : true
+}, {
+	"text" : "5(mins)",
+	"value" : "5"
 }, {
 	"text" : "6(mins)",
 	"value" : "6"
@@ -61,13 +64,17 @@ for (var i = 0, l = optionsTreadMill.length; i < l; i++) {
 }
 
 /**
- * Populating the TreadMill(mins) drop down in add-wo-detail.html
+ * Populating the Cycling(mins) drop down in add-wo-detail.html
  */
 var optionsCycling = [ {
-	"text" : "5(mins)",
-	"value" : "5",
+	"text" : "0(mins)",
+	"value" : "0",
 	"selected" : true
-}, {
+}, 
+ {
+	"text" : "5(mins)",
+	"value" : "5"
+},{
 	"text" : "6(mins)",
 	"value" : "6"
 }, {

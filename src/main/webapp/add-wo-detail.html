@@ -13,8 +13,10 @@
 <!-- Google Fonts-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
+<!-- Anjular Script -->
+<script src="js/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="">
 	<div id="wrapper">
 		<nav class="navbar navbar-default top-navbar" role="navigation">
 			<div class="navbar-header">
@@ -83,14 +85,14 @@
 				<!-- /. ROW  -->
 				<div class="row">
 					<div class="col-md-12">
-						<form action="api/users/ashish/add/workout_details" method="post">
+						<form  name="addWOForm" action="api/users/ashish/add/workout_details" method="post">
 							<div class="row">
 								<div class="col-md-2">
 									<label for="date">Date:</label>
 								</div>
 								<div class="col-md-8">
-									<input type="text" name="date" style="width: 200px;" />
-									(yyyy/MM/dd)
+									<input type="text" name="date" style="width: 200px;" required/>(yyyy/MM/dd)
+									<span ng-show="addWOForm.date.$touched && addWOForm.date.$invalid">Date is required.</span>
 								</div>
 							</div>
 							<br>
@@ -99,7 +101,8 @@
 									<label for="weight">Weight(kg):</label>
 								</div>
 								<div class="col-md-8">
-									<input type="number" step="any" name="weight" style="width: 200px;" />
+									<input type="number" step="any" name="weight" style="width: 200px;" required/>
+									<span ng-show="addWOForm.number.$touched && addWOForm.number.$invalid">Weight is required.</span>
 								</div>
 							</div>
 							<br>
@@ -108,7 +111,7 @@
 									<label for="treadmill_km">TreadMill(km):</label>
 								</div>
 								<div class="col-md-8">
-									<input type="number" step="any" name="treadmill_km" style="width: 200px;" />
+									<input type="number" step="any" name="treadmill_km" style="width: 200px;" value="0"/>
 								</div>
 							</div>
 							<br>
@@ -131,7 +134,7 @@
 									<label for="cycling_km">Cycling(km):</label>
 								</div>
 								<div class="col-md-8">
-									<input type="number" step="any" name="cycling_km" style="width: 200px;" />
+									<input type="number" step="any" name="cycling_km" style="width: 200px;" value="0"/>
 								</div>
 							</div>
 							<br>
@@ -161,6 +164,7 @@
 										<option value="Shoulder">Shoulder</option>
 										<option value="Back">Back</option>
 										<option value="Legs">Legs</option>
+										<option value="Abs">Abs</option>
 										<option value="Basics">Basics</option>
 									</select>
 								</div>

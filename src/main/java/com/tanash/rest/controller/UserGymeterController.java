@@ -56,6 +56,7 @@ public class UserGymeterController {
 		java.util.Date date1 = new SimpleDateFormat("yyyy/MM/dd").parse(date);
 		java.sql.Date gymDate = new java.sql.Date(date1.getTime());
 		System.out.println(date + "\t" + gymDate);
+		
 		hmobj.setGym_date(gymDate);
 		hmobj.setWeight_kg(Double.parseDouble(weight));
 		hmobj.setTreadmill_km(Double.parseDouble(treadmill_km));
@@ -103,7 +104,7 @@ public class UserGymeterController {
 		List<WorkOutPlan> wopMetrics = usergymeterservice.getWorkOutPlan(userName);
 		String wopMetricsJson = "{ \"wopdata\": " + new Gson().toJson(wopMetrics) + "}";
 		logger.info("json String : " + wopMetricsJson);
-		System.out.println("json String : " + wopMetricsJson);
+		System.out.println("json String :: " + wopMetricsJson);
 
 		// return Response.status(200).entity(json).build();
 		return Response.ok(wopMetricsJson, MediaType.APPLICATION_JSON).build();
