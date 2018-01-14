@@ -426,25 +426,28 @@ FusionCharts.ready(function () {
             },
             "data": [{
                 "label": "Biceps",
-                "value": "11"
+                "value": "41"
             }, {
                 "label": "Triceps",
-                "value": "10"
+                "value": "39"
             }, {
                 "label": "Chest",
-                "value": "10"
+                "value": "39"
             }, {
                 "label": "Shoulder",
-                "value": "12"
+                "value": "39"
             }, {
                 "label": "Back",
-                "value": "7"
+                "value": "33"
             }, {
                 "label": "Legs",
-                "value": "1"
+                "value": "14"
             }, {
                 "label": "Basics",
-                "value": "11"
+                "value": "25"
+            },{
+            	"label": "Abs",
+            	"value": "1"
             }]
         }
     }
