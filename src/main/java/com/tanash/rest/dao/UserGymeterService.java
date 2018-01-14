@@ -20,6 +20,7 @@ public class UserGymeterService {
 	private PreparedStatement preparedStmt;
 	WorkOutPlan wop;
 	List<WorkOutPlan> wopList;
+	List<Number> userWorkoutSummary;
 
 	public UserGymeterService() {
 		connection = DBUtility.getConnection();
@@ -95,6 +96,26 @@ public class UserGymeterService {
 		}
 
 		return wopList;
+	}
+
+	public List<Number> getSummary(String userName) {
+		userWorkoutSummary = new ArrayList<>();
+		System.out.println("Getting workout summer of user: " + userName);
+		try{
+			String query = "select count(record_id) as DaysWorkout, sum(treadmill_km), sum(cycling_km), "
+							+ " max(weight_kg)-min(weight_kg) as WeightReduce from health_meter";
+			preparedStmt = connection.prepareStatement(query);
+			rs = preparedStmt.executeQuery();
+			while(rs.next()){
+				userWorkoutSummary.add(rs.getInt("DaysWorkout"));
+				userWorkoutSummary.add(rs.getInt("sum(treadmill_km)"));
+				userWorkoutSummary.add(rs.getInt("sum(cycling_km)"));
+				userWorkoutSummary.add(rs.getInt("WeightReduce"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return userWorkoutSummary;
 	}
 
 }

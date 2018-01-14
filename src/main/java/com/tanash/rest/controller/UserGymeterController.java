@@ -109,4 +109,24 @@ public class UserGymeterController {
 		// return Response.status(200).entity(json).build();
 		return Response.ok(wopMetricsJson, MediaType.APPLICATION_JSON).build();
 	}
+	
+	/**
+	 * Get the Summary of user's Workout
+	 * */
+	@GET
+	@Path("/{user_name}/workout_summary")
+	@Produces("text/html")
+	public Response getWorkOutSummarry(@PathParam("user_name") String userName) {
+
+		System.out.println("getWorkOutSummary() called...");
+
+		List<Number> userSummary = usergymeterservice.getSummary(userName);
+		String userSummaryJson = "{ \"workOutSummary\": " + new Gson().toJson(userSummary) + "}";
+		logger.info("json String : " + userSummaryJson);
+		System.out.println("json String : " + userSummaryJson);
+
+		// return Response.status(200).entity(json).build();
+		return Response.ok(userSummaryJson, MediaType.APPLICATION_JSON).build();
+	}
+	
 }

@@ -147,5 +147,8 @@ mysql> select sum(cycling_km), sum(cycling_time) as minutes, curdate() from heal
 
 -- 2017 recap End:
 
+-- Data from the home page: days workout, treadmill distance, cycling distance and weight reduction
+select count(record_id) as DaysWorkout, sum(treadmill_km), sum(cycling_km),  max(weight_kg)-min(weight_kg) as WeightReduce
+from health_meter;
 
 
