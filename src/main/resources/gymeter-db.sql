@@ -113,8 +113,7 @@ where user_name='Ashish';
 
 -- 2017 recap Start:
 
-select gym_set, count(*) as 'number(set)' from health_meter
-    -> group by gym_set;
+select gym_set, count(*) as 'number(set)' from health_meter group by gym_set;
 +----------+-------------+
 | gym_set  | number(set) |
 +----------+-------------+
@@ -133,15 +132,15 @@ mysql>  select sum(treadmill_km), sum(treadmill_time) as minutes, curdate() from
 +-------------------+---------+------------+
 | sum(treadmill_km) | minutes | curdate()  |
 +-------------------+---------+------------+
-|           183.965 |    1344 | 2018-01-13 |
+|           219.585 |    1561 | 2018-04-08 |
 +-------------------+---------+------------+
-1 row in set (0.04 sec)
+1 row in set (0.03 sec)
 
 mysql> select sum(cycling_km), sum(cycling_time) as minutes, curdate() from health_meter;
 +-----------------+---------+------------+
 | sum(cycling_km) | minutes | curdate()  |
 +-----------------+---------+------------+
-|         285.330 |     775 | 2018-01-13 |
+|         351.260 |     932 | 2018-04-08 |
 +-----------------+---------+------------+
 1 row in set (0.00 sec)
 
