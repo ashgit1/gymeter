@@ -397,7 +397,7 @@ FusionCharts.ready(function () {
         dataFormat: dataType,
         dataSource: {
             "chart": {
-                "caption": "No of each Gym Sets",
+                "caption": "No Of Gym Sets",
                 "subCaption": "Till Date",
                 "numberPrefix": "#",
                 "showBorder": "0",
@@ -426,28 +426,28 @@ FusionCharts.ready(function () {
             },
             "data": [{
                 "label": "Biceps",
-                "value": "41"
+                "value": "77"
             }, {
                 "label": "Triceps",
-                "value": "39"
+                "value": "71"
             }, {
                 "label": "Chest",
-                "value": "39"
+                "value": "75"
             }, {
                 "label": "Shoulder",
-                "value": "39"
+                "value": "74"
             }, {
                 "label": "Back",
-                "value": "33"
+                "value": "63"
             }, {
                 "label": "Legs",
-                "value": "14"
+                "value": "38"
             }, {
                 "label": "Basics",
-                "value": "25"
+                "value": "39"
             },{
             	"label": "Abs",
-            	"value": "1"
+            	"value": "6"
             }]
         }
     }

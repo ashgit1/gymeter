@@ -150,4 +150,8 @@ mysql> select sum(cycling_km), sum(cycling_time) as minutes, curdate() from heal
 select count(record_id) as DaysWorkout, sum(treadmill_km), sum(cycling_km),  max(weight_kg)-min(weight_kg) as WeightReduce
 from health_meter;
 
+-- 2018 recap Start:
+select gym_set, count(*) as 'number(set)' from health_meter 
+where year(gym_date) = 2018 
+group by gym_set;
 
